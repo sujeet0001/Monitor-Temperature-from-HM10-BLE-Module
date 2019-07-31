@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ChooseAlarm">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/ca_toolbar"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/d20">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ca_bell"
+            android:text="@string/bell"
+            android:textSize="@dimen/t18"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ca_brassbell"
+            android:text="@string/brassbell"
+            android:textSize="@dimen/t18"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ca_horn"
+            android:text="@string/horn"
+            android:textSize="@dimen/t18"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ca_plectron"
+            android:text="@string/plectron"
+            android:textSize="@dimen/t18"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ca_woop"
+            android:text="@string/woopwoop"
+            android:textSize="@dimen/t18"/>
+
+    </RadioGroup>
+
+</LinearLayout>

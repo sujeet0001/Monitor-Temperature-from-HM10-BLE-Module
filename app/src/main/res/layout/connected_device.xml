@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activities.ConnectedDevice">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl">
+
+        <include
+            android:id="@+id/cd_toolbar"
+            layout="@layout/toolbar" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cd_alarm"
+            app:srcCompat="@drawable/alarm"
+            android:background="@color/trans"
+            android:tint="@color/white"
+            android:padding="@dimen/d10"
+            android:layout_marginEnd="@dimen/d5"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/d10"
+        android:paddingStart="@dimen/d10"
+        android:paddingEnd="@dimen/d10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rc_grey80"
+            android:orientation="vertical"
+            android:padding="@dimen/d10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/devname" />
+
+            <TextView
+                android:id="@+id/cd_devname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d5"
+                android:layout_marginBottom="@dimen/d10"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cd_setthreshold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/d10"
+            android:layout_marginBottom="@dimen/d10"
+            android:paddingStart="@dimen/d20"
+            android:paddingEnd="@dimen/d20"
+            android:background="@drawable/rcs_grey2"
+            android:text="@string/setthreshold"
+            android:textAllCaps="false"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/cd_lay"
+            android:visibility="invisible"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/d10"
+                android:background="@drawable/rc_grey80"
+                android:orientation="vertical"
+                android:padding="@dimen/d10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/d5"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/minthres" />
+
+                    <Space
+                        android:layout_width="@dimen/d10"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/cd_minthres"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="@string/maxthres" />
+
+                    <Space
+                        android:layout_width="@dimen/d10"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/cd_maxthres"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/d10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="@string/disablealarm"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/cd_switch"/>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cd_switch"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/d15"
+                    android:layout_marginEnd="@dimen/d15"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                    android:text="@string/enablealarm"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/cd_switch"/>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                app:cardElevation="@dimen/d10"
+                android:layout_marginTop="@dimen/d10"
+                android:layout_marginBottom="@dimen/d10">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cd_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/d5"
+                        android:text="0"
+                        android:textSize="@dimen/t50" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/degree"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <Button
+                android:id="@+id/cd_listen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/rc_grey"
+                android:paddingStart="@dimen/d20"
+                android:paddingEnd="@dimen/d20"
+                android:text="@string/startlistening"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cd_progress"
+        android:visibility="gone"
+        android:background="@drawable/r_white"
+        android:padding="@dimen/d15"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

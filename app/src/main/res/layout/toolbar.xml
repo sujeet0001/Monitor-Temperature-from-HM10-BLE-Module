@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:padding="@dimen/d20">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:id="@+id/tb_title"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb_timer"
+        app:srcCompat="@drawable/timer"
+        android:layout_marginStart="@dimen/d5"
+        android:visibility="gone"
+        android:background="@color/trans"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb_disconnect"
+        app:srcCompat="@drawable/bt_disconnect"
+        android:layout_marginStart="@dimen/d5"
+        android:visibility="gone"
+        android:paddingStart="@dimen/d10"
+        android:paddingEnd="0dp"
+        android:background="@color/trans"/>
+
+</LinearLayout>

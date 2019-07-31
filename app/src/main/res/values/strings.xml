@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Temp Monitor</string>
+    <string name="scan">Scan for Devices</string>
+    <string name="nopaireddevs">No paired devices found</string>
+    <string name="nodevs">No devices found</string>
+    <string name="connect">Connect</string>
+    <string name="startlistening">Start Monitoring</string>
+    <string name="stoplistening">Stop Monitoring</string>
+    <string name="stopscan">Stop Scanning</string>
+    <string name="bleunsupported">Bluetooth not supported</string>
+    <string name="bluetoothnotenabled">Bluetooth not enabled.</string>
+    <string name="enable">Enable</string>
+    <string name="setthreshold">Set Temperature Thresholds</string>
+    <string name="disable">Disable</string>
+    <string name="cnndev">Connected Device</string>
+    <string name="minthres">Minimum Threshold</string>
+    <string name="maxthres">Maximum Threshold</string>
+    <string name="maxthrrchd">Maximum Threshold\nReached</string>
+    <string name="minthrrchd">Minimum Threshold\nReached</string>
+    <string name="degree">°F</string>
+    <string name="done">Done</string>
+    <string name="stop">Stop</string>
+    <string name="devname">Device Name</string>
+    <string name="min">Minimum</string>
+    <string name="max">Maximum</string>
+    <string name="devadd">Device Address</string>
+    <string name="tempmonapp">Temperature\nMonitoring\nApp</string>
+    <string name="website">www.milehidistilling.com</string>
+    <string name="disablealarm">Disable Alarm</string>
+    <string name="enablealarm">Enable Alarm</string>
+    <string name="ble_not_supported">Bluetooth LE not supported</string>
+    <string name="bell">Bell</string>
+    <string name="brassbell">Brass Bell</string>
+    <string name="horn">Horn</string>
+    <string name="plectron">Plectron</string>
+    <string name="woopwoop">Woop Woop</string>
+</resources>
