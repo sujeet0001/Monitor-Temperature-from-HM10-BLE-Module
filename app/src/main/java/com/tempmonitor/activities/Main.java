@@ -66,7 +66,7 @@ public class Main extends AppCompatActivity {
 
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
             Toast.makeText(getApplicationContext(), R.string.bleunsupported, Toast.LENGTH_SHORT).show();
-        } if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
+        } else if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
             Toast.makeText(this, R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
             finish();
         } else {
