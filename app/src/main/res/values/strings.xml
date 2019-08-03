@@ -25,7 +25,6 @@
     <string name="max">Maximum</string>
     <string name="devadd">Device Address</string>
     <string name="tempmonapp">Temperature\nMonitoring\nApp</string>
-    <string name="website">www.milehidistilling.com</string>
     <string name="disablealarm">Disable Alarm</string>
     <string name="enablealarm">Enable Alarm</string>
     <string name="ble_not_supported">Bluetooth LE not supported</string>
