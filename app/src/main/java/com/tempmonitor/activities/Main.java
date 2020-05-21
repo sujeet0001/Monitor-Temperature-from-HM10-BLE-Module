@@ -56,14 +56,6 @@ public class Main extends AppCompatActivity {
         nodevs = findViewById(R.id.ma_nodevs);
         scan = findViewById(R.id.ma_scan);
 
-        deviceIS = new ArrayList<>();
-        llm = new LinearLayoutManager(getApplicationContext());
-
-        list.setHasFixedSize(true);
-        devicesA = new DevicesA(Main.this, deviceIS);
-        list.setLayoutManager(llm);
-        list.setAdapter(devicesA);
-
         if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
             Toast.makeText(getApplicationContext(), R.string.bleunsupported, Toast.LENGTH_SHORT).show();
         } else if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
@@ -119,6 +111,14 @@ public class Main extends AppCompatActivity {
     }
 
     void getpaireddevs() {
+        deviceIS = new ArrayList<>();
+        llm = new LinearLayoutManager(getApplicationContext());
+
+        list.setHasFixedSize(true);
+        devicesA = new DevicesA(Main.this, deviceIS);
+        list.setLayoutManager(llm);
+        list.setAdapter(devicesA);
+        
         bluetoothDevices = bluetoothAdapter.getBondedDevices();
         if (bluetoothDevices.size() > 0) {
             for (BluetoothDevice bd : bluetoothDevices) {
